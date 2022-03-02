@@ -7,10 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" media="all" 
           href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 
   <body>
   
+  
+    <div class="jumbotron">
+  <h1 class="display-4">Coronavirus Tracker</h1>
+  <p class="lead">This webpage lists the current number of cases reported aross the globe</p>
+  <hr class="my-4">
+  <p>Refreshes every hour</p>
+  <p class = "lead">    Total number of cases worldwide : </p>
+  <p class="lead" th:text = "${totalReportedCases}">
+
+
+  </p>
+</div>
+
     <p th:text="${testName}">Welcome to our grocery store!</p>
     <table>
       <tr>
