@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Covid Tracking Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" 
+          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+  </head>
+
+  <body>
+  
+    <p th:text="${testName}">Welcome to our grocery store!</p>
+    <table>
+      <tr>
+        <th>State</th>
+        <th>Country</th>
+        <th>Total Cases</th>
+      </tr>
+      <tr th:each="ls : ${locationStats}">
+        <td th:text="${ls.state}"></td>
+        <td th:text="${ls.country}">2.41</td>
+        <td th:text="${ls.latestTotalCases}">0</td>
+      </tr>
+    </table>
+  
+  </body>
+
+</html>
